@@ -12,8 +12,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Netlify Forms: formulaire caché pour détection au build -->
-    <!-- Les soumissions sont envoyées à devis@grandbassamfood.fr via dashboard Netlify -->
+  </head>
+  <body>
+    <!--
+      NETLIFY FORMS — formulaire caché dans le BODY (obligatoire pour la détection)
+      Chaque soumission sera envoyée à devis@grandbassamfood.fr
+    -->
     <form name="devis" netlify netlify-honeypot="bot-field" hidden>
       <input type="text"  name="nom" />
       <input type="email" name="email" />
@@ -27,8 +31,7 @@
       <textarea           name="message"></textarea>
       <input type="text"  name="bot-field" />
     </form>
-  </head>
-  <body>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
